@@ -1,0 +1,60 @@
+/* Fecha: 14/02/2023
+Autor: Andres Felipe Useche Hernandez
+ TALLER  N1
+/*Ejercicio 01:
+1.- Crear un array con 10 elementos
+2.- Crear una función para generar números aleatorios entre 0 y 25
+3.- Llenar el array con 10 números aleatorios
+4.- Crear un puntero
+5.- Imprimir el contenido del array usando el puntero
+6.- Imprimir las direcciones del contenido del array usando el puntero.*/
+
+
+
+#include<iostream>
+  //Se crea la biblioteca para usar la funcion sqrt
+#include<cmath>
+   
+    //Se crea la biblioteca de vector
+#include<vector>
+#include<stdlib.h>
+  //Se crea el dominio de la biblioteca "GLOBAL"
+using namespace std;
+
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+// Se crea una función que genera un número aleatorio entre 0 y 25
+int funcion_Numero_aleatorio() {
+    return rand() % (26);
+}
+
+int main() {
+    // se crea un vector conpuesto por 10 elementos
+    int primer_vector[10];
+    
+    // Se desarrollla un fot para llenar el vector con 10 números aleatorios
+    for (int i = 0; i < 10; i++) {
+        primer_vector[i] = funcion_Numero_aleatorio();
+    }
+    
+    // Se crea un puntero que apunta al primer elemento del vector 
+    int *apuntador_a = primer_vector;
+    
+    // Se crea otro for para imprimir el vector usando el apuntador
+    for (int i = 0; i < 10; i++) {
+        cout << *(apuntador_a + i) << " ";
+    }
+    cout << endl;
+    
+    // Se imprimen las direcciones de los elementos del vector
+    for (int i = 0; i < 10; i++) {
+    	//Se accede a la dirección de memoria del elemento i sumando i a la dirección de memoria
+        cout << apuntador_a + i <<endl; 
+    }
+    cout << endl;
+    
+    return 0;
+}
