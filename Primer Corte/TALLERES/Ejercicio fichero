@@ -1,0 +1,111 @@
+/*TALLER NUMERO 1-Ejercicios 02:
+Autor: Andres Felipe Useche Hernandez
+Problema:
+Se desea capturar los datos de los clientes para ser impreso en la factura. Se requiere
+crear una estructura de datos, que encapsule los datos de los usuarios. Se requiere que
+el uso de la estructura sea a través de punteros. Se requiere imprimir las facturas en
+un fichero de texto.
+Recomendaciones:
+1.- Hacer funciones por separado
+2.- Anunciar/Documentar acciones
+3.- Identificar su fichero fuente .cpp
+4.- Subir el fichero fuente a un repositorio.*/
+
+
+//Se crean las librerias de fichero, vector y iostream
+#include<iostream>
+#include<fstream>
+#include<vector>
+
+//Se crea el dominio de la biblioteca "GLOBAL"
+using namespace std;
+//se crea la estructura con las variables que contendra la factura
+struct datos_cliente{
+    string fecha="dfdsfsdf";
+    string nombre="ANDRES";
+    int documento= 43241234;
+    string producto="SGFDGDFSG";
+    int cantidad=3;
+    int precio=50;
+};
+
+//se crea la funcion principal
+    int main(){
+        
+        // se crea un tipo de dato string con variable linea, para leer el archivo mas adelante
+        string linea;
+        
+        // se crean los punteros de la factura
+       string *punterofecha;
+    string *punteronombre;
+   int  *punterodocumento;
+   int *punteroproducto;
+   int  *punterocantidad;
+     int *puteroprecio;
+     int contador;
+    
+      //Se crea el fichero con la biblioteca fstream para escritura
+        ofstream miarchivo_clientes("clientes.txt");
+        //Se abre el archivo para escritura (si se puede)
+        if(miarchivo_clientes.is_open()){
+            //se crea una variable para un bucle do while, con el fin de darle la posibilidad
+            //al usuario de ingresar mas facturas
+            string respuesta;
+            
+        //se inicia el bucle
+        do{
+            //se capturan los datos de la factura y se van guardando en el fichero
+            cout<<"ingrese los datos del cliente: "<<endl;
+            cout<<"ingrese la fecha de hoy: "<<endl;
+            cin>>punterofecha[contador].fecha;
+            miarchivo_clientes>>puntero.fecha;
+            
+            cout<<"ingrese el nombre del cliente: "<<endl;
+            cin>>punteronombre[contador].nombre;
+            miarchivo_clientes>>puntero.nombre;
+            
+            cout<<"ingrese el documento del cliente: "<<endl;
+            cin>>punterodocumento[contador].documento;
+            miarchivo_clientes>>puntero.documento;
+            
+            cout<<"ingrese el producto del cliente:  "<<endl;
+            cin>>punteroproducto[contador].producto;
+            miarchivo_clientes>>puntero.producto;
+            
+            cout<<"ingrese la cantidad del producto: "<<endl;
+            cin>>punterocantidad[contador].cantidad;
+            miarchivo_clientes>>puntero.cantidad;
+            
+            cout<<"ingrese el precio total: "<<endl;
+            cin>>punteroprecio[contador].precio<<endl;
+            miarchivo_clientes>>puntero.precio;
+            
+            while(respuesta=="si")
+            //se termina el bucle
+             }}
+             //si el fichero no deja ser modificado ponemos:
+             else{
+		cout<<"No se puede abrir el archivo :("<<endl;
+            
+        }
+        //cerramos el fichero de escritura
+        miarchivo_clientes.close();
+        
+        //abrimos el fichero de lectura para imprimir las facturas
+            ifstream milectura("clientes.txt");
+            while (getline(milectura, linea)){
+			cout<<linea<<endl;
+		}
+		//se cierra el fichero de lectura
+		milectura.close();
+		
+	
+	cout<<"Fin del programa con exito";
+	
+	return 0;
+
+        }
+    
+    
+    
+    
