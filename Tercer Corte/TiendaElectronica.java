@@ -1,5 +1,5 @@
 
-//importamos las librerias que se van a utilizar a lo largo del codigo
+//importamos las librerias que se van a utilizar a lo largo del codigo.
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.InputMismatchException;
